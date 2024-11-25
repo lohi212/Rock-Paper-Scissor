@@ -1,38 +1,135 @@
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  background-color: #192344;
+}
+
+.App, #root {
+  height: 100%;
+}
+
 .App {
+  padding: 30px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.dashboard, .score-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard {
+  flex-direction: column;
+  height: 100%;
+  /* justify-content: space-around; */
+}
+
+.drawer {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 400px;
+  background-color: #fff;
+  color: #000;
+
+  display: none;
+}
+
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid grey;
+  padding: 10px 20px;
+}
+
+.rules-list {
+  line-height: 25px;
+  padding-right: 20px;
+}
+
+.rules-list-text {
+  margin-bottom: 20px;
+}
+
+.rules-list > li {
+  margin: 10px;
+}
+
+.close {
+  cursor: pointer;
+}
+
+.score-card {
+  flex-direction: column;
+  background-color: #f7f7f8;
+  color: #676666;
+  width: 150px;
+  border-radius: 10px;
+
+  position: absolute;
+  top: 50px;
+}
+
+button {
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  border: none;
+  width: 80px;
+  height: 40px;
+}
+
+.rules-btn {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  background-color: #82df82;
+}
+
+.score {
+  margin-bottom: 10px;
+}
+
+.game-dashboard {
+  height: 300px;
+}
+
+.game-items {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flex-justify-between {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item {
+  border-radius: 50%;
+  border: 1px solid grey;
+  padding: 10px;
+  cursor: pointer;
+  /* width: 80px;
+  height: 80px; */
+}
+
+.selected-game {
+  display: flex;
+  gap: 20px;
+  height: 200px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.play-again-btn {
+  background-color: #82df82;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.restart-btn {
+  background-color: #bb2424;
+  width: 120px;
 }
