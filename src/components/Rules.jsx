@@ -1,16 +1,26 @@
 import React from "react";
 
 const Rules = () => {
-  const handleRulesClick = () => {};
+  const handleRulesClick = () => {
+    const rulesDrawer = document.getElementById("rules-drawer");
 
-  const closeRules = () => {};
+    rulesDrawer.classList.remove("hide-drawer");
+    rulesDrawer.classList.add("display-drawer");
+  };
+
+  const closeRules = () => {
+    const rulesDrawer = document.getElementById("rules-drawer");
+
+    rulesDrawer.classList.remove("display-drawer");
+    rulesDrawer.classList.add("hide-drawer");
+  };
 
   return (
     <div>
       <button onClick={handleRulesClick} className="rules-btn">
         Rules
       </button>
-      <div className="drawer">
+      <div className="drawer" id="rules-drawer">
         <div className="drawer-header">
           <h3>Rules</h3>
           <p onClick={closeRules} className="close">
