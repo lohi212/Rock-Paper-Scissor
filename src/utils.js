@@ -1,6 +1,6 @@
 export const mapperObj = {
   Rock: {
-    img: "/images/fist.png",
+    img: "/images/rock.png",
     key: "rock",
     win: "Scissor",
   },

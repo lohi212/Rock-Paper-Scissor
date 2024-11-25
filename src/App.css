@@ -10,7 +10,6 @@ body {
 }
 
 .App {
-  padding: 30px;
   font-size: 18px;
   color: #fff;
 }
@@ -73,6 +72,7 @@ body {
 
   position: absolute;
   top: 50px;
+  padding: 0px 0px 10px 0px;
 }
 
 button {
@@ -91,35 +91,67 @@ button {
   background-color: #82df82;
 }
 
-.score {
-  margin-bottom: 10px;
-}
-
 .game-dashboard {
   height: 300px;
 }
 
-.game-items {
+.title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.text-center {
   text-align: center;
 }
 
-.flex-justify-between {
-  display: flex;
-  justify-content: space-between;
+.triangle {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto;
+  column-gap: 100px; /* Gap between first and second boxes */
+  row-gap: 50px; /* Gap between the first row and the third box */
+  justify-content: center; /* Centers the grid horizontally */
+  position: relative;
 }
 
-.item {
+.box-1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.box-2 {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.box-3 {
+  grid-column: 1 / span 2; /* Spans across the two columns */
+  grid-row: 2; /* Places the third box in the second row */
+  justify-self: center; /* Centers it horizontally */
+}
+
+.box {
+  background-color: #fff;
   border-radius: 50%;
-  border: 1px solid grey;
-  padding: 10px;
   cursor: pointer;
-  /* width: 80px;
-  height: 80px; */
+}
+
+.spinner {
+  animation: spinY 0.5s infinite linear; /* Applies X-axis spin animation */
+  transform-origin: center; /* Ensures rotation is around the center of the image */
+}
+
+@keyframes spinY {
+  0% {
+    transform: rotateY(0deg); /* Start at 0 degrees */
+  }
+  100% {
+    transform: rotateY(360deg); /* Complete full rotation */
+  }
 }
 
 .selected-game {
   display: flex;
-  gap: 20px;
+  gap: 30px;
   height: 200px;
   align-items: center;
   justify-content: space-between;
@@ -127,6 +159,7 @@ button {
 
 .play-again-btn {
   background-color: #82df82;
+  width: 120px;
 }
 
 .restart-btn {
